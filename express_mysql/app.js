@@ -71,7 +71,7 @@ app.post('/login',async (req, res) => { //로그인
   const user = await db.User.findOne({ where: { id: id }})
   const userpw = await db.User.findOne({ where: { password: pw }})
 
-  if(user && userpw) {
+  if(user && userpw == user.pw) {
     // 세션기록
     
     console.log("로그인 성공");
