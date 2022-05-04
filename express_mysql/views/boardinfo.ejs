@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border:solid 1px red;
+        }
+        #content_box{
+            margin : 0 auto;
+            width:1000px;
+            height:1000px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "content_box">
+        <div><h1>BOARD INFO</h1></div>
+        <div><h2>글제목 : <%= title %></h2></div>
+        <div><strong>작성자:<%= id %></strong> </div>
+        <div><strong>글 내용:</strong> <%= content %> </div>
+        
+        
+        <form action="/b_delete/<%= num %>" method="post">
+            <%if(sess == id){%>
+            <button type="submit">삭제</button>
+            <button type="button" class="navyBtn" onClick="location.href='/b_updateform/<%= num %>'">수정</button>
+            <%}%>
+        </form>
+        
+
+    </div>
+</body>
+</html>

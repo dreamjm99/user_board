@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User update</title>
+</head>
+<body>
+    <h1>업데이트 폼</h1>
+    <form action = "/update/<%= id %> " method = "POST">
+        id :<input type = "text" name = "id" id = "id" value = "<%= id %>"><br>
+        email :<input type = "text" name = "email" id = "email" value = "<%= email %>"><br>
+        nickname :<input type = "text" name = "nickname" id = "nickname" value = "<%= nickname %>"><br>
+        password :<input type = "password" name = "password" id = "password" value = "<%= password %>"><br>
+        <button type = "submit">업데이트</button>
+    </form>
+</body>
+</html>
